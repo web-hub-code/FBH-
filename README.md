@@ -5,75 +5,121 @@
     <title>Family Youth Group</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f8ff;
+            background-color: #f4f7f9;
             color: #333;
         }
         header {
-            background-color: #007acc;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
             color: white;
-            padding: 20px 0;
             text-align: center;
+            padding: 80px 20px;
+            background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 1;
         }
         nav {
-            background-color: #005fa3;
+            background-color: #007acc;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
+            flex-wrap: wrap;
         }
         nav a {
             color: white;
             text-decoration: none;
-            padding: 15px;
+            padding: 15px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #004080;
-            border-radius: 5px;
+            background-color: #005fa3;
         }
         section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             max-width: 1000px;
             margin: auto;
         }
         h2 {
             color: #007acc;
+            text-align: center;
+            margin-bottom: 40px;
         }
         .activities {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
         .activity-card {
             background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .activity-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+        .activity-card div {
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            transition: border 0.3s;
+        }
+        form input:focus, form textarea:focus {
+            border-color: #007acc;
+            outline: none;
+        }
+        form button {
+            padding: 12px 25px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+        form button:hover {
+            background-color: #005fa3;
+            transform: scale(1.05);
         }
         footer {
             background-color: #007acc;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
+            margin-top: 40px;
         }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        form button {
-            padding: 10px 20px;
-            background-color: #007acc;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #005fa3;
+        @media(max-width: 600px){
+            nav {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -92,28 +138,37 @@
 
     <section id="home">
         <h2>Welcome to Our Group</h2>
-        <p>We are a community-focused youth group aiming to empower young people and build strong family bonds. Join us for events, workshops, and fun activities!</p>
+        <p style="text-align:center; max-width:800px; margin:auto;">We are a community-focused youth group aiming to empower young people and build strong family bonds. Join us for events, workshops, and fun activities!</p>
     </section>
 
     <section id="about">
         <h2>About Us</h2>
-        <p>Family Youth Group started in 2024 with a mission to create a safe and inspiring space for youth. We believe in teamwork, learning, and community support.</p>
+        <p style="text-align:center; max-width:800px; margin:auto;">Family Youth Group started in 2024 with a mission to create a safe and inspiring space for youth. We believe in teamwork, learning, and community support.</p>
     </section>
 
     <section id="activities">
         <h2>Our Activities</h2>
         <div class="activities">
             <div class="activity-card">
-                <h3>Workshops</h3>
-                <p>Skill-building workshops for leadership, creativity, and personal growth.</p>
+                <img src="https://images.unsplash.com/photo-1531497865140-1636d62e2034?auto=format&fit=crop&w=800&q=80" alt="Workshop">
+                <div>
+                    <h3>Workshops</h3>
+                    <p>Skill-building workshops for leadership, creativity, and personal growth.</p>
+                </div>
             </div>
             <div class="activity-card">
-                <h3>Community Service</h3>
-                <p>Participate in local community projects and volunteer opportunities.</p>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Community Service">
+                <div>
+                    <h3>Community Service</h3>
+                    <p>Participate in local community projects and volunteer opportunities.</p>
+                </div>
             </div>
             <div class="activity-card">
-                <h3>Sports & Events</h3>
-                <p>Fun sports, competitions, and social events to connect with peers.</p>
+                <img src="https://images.unsplash.com/photo-1554288245-9cda7f9e18b6?auto=format&fit=crop&w=800&q=80" alt="Sports & Events">
+                <div>
+                    <h3>Sports & Events</h3>
+                    <p>Fun sports, competitions, and social events to connect with peers.</p>
+                </div>
             </div>
         </div>
     </section>
