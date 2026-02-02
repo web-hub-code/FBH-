@@ -13,7 +13,7 @@
             scroll-behavior: smooth;
         }
         header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1598399513680-f3f45de99216?auto=format&fit=crop&w=1470&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
             background-size: cover;
             background-position: center;
             color: white;
@@ -180,21 +180,21 @@
         <h2>Our Activities</h2>
         <div class="activities">
             <div class="activity-card">
-                <img src="https://images.unsplash.com/photo-1620799919687-d5678dbd9b7a?auto=format&fit=crop&w=800&q=80" alt="Cultural Dance">
+                <img src="https://images.pexels.com/photos/733232/pexels-photo-733232.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cultural Dance">
                 <div>
                     <h3>Cultural Workshops</h3>
                     <p>Learn traditional Gilgit crafts, music, and dance in fun workshops.</p>
                 </div>
             </div>
             <div class="activity-card">
-                <img src="https://images.unsplash.com/photo-1623967477261-b091edcb0345?auto=format&fit=crop&w=800&q=80" alt="Community Gathering">
+                <img src="https://images.pexels.com/photos/591840/pexels-photo-591840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Community Gathering">
                 <div>
                     <h3>Community Events</h3>
                     <p>Engage with local families and youth through festivals and gatherings.</p>
                 </div>
             </div>
             <div class="activity-card">
-                <img src="https://images.unsplash.com/photo-1560022641-507d4d1ed0d6?auto=format&fit=crop&w=800&q=80" alt="Youth Sports">
+                <img src="https://images.pexels.com/photos/1163086/pexels-photo-1163086.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Youth Sports">
                 <div>
                     <h3>Sports & Fun Activities</h3>
                     <p>Connect with peers through games, competitions, and recreational activities.</p>
@@ -218,7 +218,6 @@
     </footer>
 
     <script>
-        // Scroll animation
         const sections = document.querySelectorAll('section');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
